@@ -15,6 +15,7 @@ def set_gatekeeper_address(addr: address):
     self.gatekeeper_address = addr
 
 @public
+@constant
 def get_gatekeeper_address() -> address:
     return self.gatekeeper_address
     
