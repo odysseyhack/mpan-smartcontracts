@@ -36,7 +36,7 @@ def submit_calc_query(clientReference: string[50], identifier: int128, attribute
     # Do some check, but not now
     query_id: int128 = self.next_query_id
     self.next_query_id = query_id + 1
-    log.Query(msg.sender, clientReference, QUERY_TYPE_INFO, query_id, identifier, attribute)
+    log.Query(msg.sender, clientReference, QUERY_TYPE_CALC, query_id, identifier, attribute)
 
 
 @public
@@ -44,6 +44,6 @@ def submit_info_query(clientReference: string[50], identifier: int128):
     # Do some check, but not now
     query_id: int128 = self.next_query_id
     self.next_query_id = query_id + 1
-    log.Query(msg.sender, clientReference, QUERY_TYPE_CALC, query_id, identifier, NONE_ATTRIBUTE)
+    log.Query(msg.sender, clientReference, QUERY_TYPE_INFO, query_id, identifier, NONE_ATTRIBUTE)
 
    
