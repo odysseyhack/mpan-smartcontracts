@@ -10,7 +10,7 @@ def __init__():
 
 @public
 def set_gatekeeper_address(addr: address):
-    # TODO: ask other contract whether sender is allowed to change stuff
+    # Future addition update: ask other contract whether sender is allowed to change stuff
     assert msg.sender == self.creator
     self.gatekeeper_address = addr
 
